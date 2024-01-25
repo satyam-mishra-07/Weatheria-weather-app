@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Weather from "./components/Weather";
 
 function App() {
+  const [location, setLocation] = useState("London");
+  async function getData(location) {
+    try {
+      const apikey = "584f8e7cb9e7b6e0fb86d1b3b1f66411";
+      let x = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${apikey}`);
+      let data = await x.json();
+      // console.log(data)
+      return data 
+    } catch (error) {
+      console.log(`${error}: Error Occured`)
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Weather getData = {getData} setLocation = {setLocation} location = {location}/>
+    </>
   );
 }
 
