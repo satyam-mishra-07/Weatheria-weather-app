@@ -2,7 +2,7 @@ import { useState } from "react";
 import Weather from "./components/Weather";
 
 function App() {
-  const [location, setLocation] = useState("London");
+  const [location, setLocation] = useState("Raniganj");
   async function getData(location) {
     try {
       const apikey = "584f8e7cb9e7b6e0fb86d1b3b1f66411";
