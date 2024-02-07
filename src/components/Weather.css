@@ -12,7 +12,7 @@ body {
 .main {
   background: #1b2068;
   width: 25vw;
-  height: 75vh;
+  height: 68vh;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -85,7 +85,7 @@ form {
 }
 
 .display .wethData #icon {
-margin-top: 2vh;
+  margin-top: 2vh;
 }
 
 .display #desc {
@@ -135,4 +135,82 @@ margin-top: 2vh;
   grid-area: pressure;
   /* font-size: 10vh;
     margin-top: 3vh; */
+}
+
+/*^ Responsiveness */
+
+@media (max-width: 1280px) {
+  .main {
+    width: 80%;
+    height: 65%;
+  }
+}
+
+@media (max-width: 1025px) {
+  .main {
+    height: 65%;
+    width: 84%;
+  }
+
+  .search {
+    margin-top: 1.7vh;
+    width: 45vw;
+  }
+
+  .btn {
+    width: 11.5vw;
+  }
+
+  .btn img {
+    width: 7vw;
+  }
+
+  .display .wethData {
+    font-size: 3vh;
+  }
+}
+
+@media (max-width: 550px) {
+  .main {
+    height: 70%;
+  }
+}
+
+@media (max-width: 450px) {
+  .main {
+    width: 95%;
+    height: 60%;
+  }
+
+  .search {
+    height: 4vh;
+    width: 44vw;
+  }
+
+  .btn {
+    height: 6.5vh;
+    width: 14.5vw;
+    margin: 11px 4px;
+  }
+
+  .btn img {
+    width: 10vw;
+  }
+
+  .display .wethData {
+    font-size: 2vh;
+  }
+}
+
+@media (max-width: 390px) {
+  .main {
+    height: 70%;
+  }
+}
+
+@media (max-width: 290px) {
+  .main {
+    height: 66%;
+    width: 96%;
+  }
 }

@@ -22,7 +22,6 @@ export default function Weather(props) {
       let Wdata = await props.getData(props.location);
       console.log(Wdata);
 
-
       setTemp(Wdata.main.temp);
       setlocName(Wdata.name);
       setconName(Wdata.sys.country);
@@ -41,7 +40,7 @@ export default function Weather(props) {
 
   useEffect(() => {
     // This function will run when the component is first loaded
-    handleSearch();
+    handleSearch(); // eslint-disable-next-line
   }, []);
 
   function handleOnChange(event) {
@@ -66,10 +65,14 @@ export default function Weather(props) {
         </form>
         <div className="display">
           <span className="wethData" id="iconDiv">
-            <img src={`https://openweathermap.org/img/wn/${Icon}@2x.png`} id="icon"/>
+            <img
+              src={`https://openweathermap.org/img/wn/${Icon}@2x.png`}
+              alt="icon"
+              id="icon"
+            />
           </span>
           <h1 className="wethData" id="temp">
-            {parseFloat(Temp - 273.15).toFixed(2)}&#176;C
+            {parseFloat(Temp - 273.15).toFixed(0)}&#176;C
           </h1>
           <span className="wethData" id="name">
             {locName},{conName}
@@ -78,10 +81,10 @@ export default function Weather(props) {
             {Desc}
           </span>
           <span className="wethData" id="min">
-            {parseFloat(Temp_Min - 273.15).toFixed(2)}&#176;C
+            {parseFloat(Temp_Min - 273.15).toFixed(0)}&#176;C
           </span>
           <span className="wethData" id="max">
-            {parseFloat(Temp_Max - 273.15).toFixed(2)}&#176;C
+            {parseFloat(Temp_Max - 273.15).toFixed(0)}&#176;C
           </span>
           <span className="wethData" id="humidity">
             Humidity: {Humidity}
