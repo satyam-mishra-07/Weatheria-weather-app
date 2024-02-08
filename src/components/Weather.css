@@ -176,10 +176,10 @@ form {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .main {
     width: 95%;
-    height: 60%;
+    height: 65%;
   }
 
   .search {
