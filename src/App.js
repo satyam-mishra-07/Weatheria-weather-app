@@ -5,7 +5,7 @@ function App() {
   const [location, setLocation] = useState("Delhi");
   async function getData(location) {
     try {
-      const apikey = "eb33959a011fdb0cb397e794784fd3e7";
+      const apikey = "584f8e7cb9e7b6e0fb86d1b3b1f66411";
       let x = await fetch(
         `http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${apikey}`
       );
