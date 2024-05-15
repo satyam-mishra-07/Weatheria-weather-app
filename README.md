@@ -1,4 +1,4 @@
-#Project is live at: https://weatheriya-weather-app.vercel.app/
+#Project is live at: https://weatheria-weather-app.vercel.app/
 
 # Getting Started with Create React App
 
